@@ -11,7 +11,8 @@ class Fizzbuzz
                 fbe = FizzbuzzEngine.new(number)
                 fbe.value
             elsif multiple_of(5,number)
-                "Buzz"
+                fbe = FizzbuzzEngine.new(number)
+                fbe.value
             else
                 number
             end
