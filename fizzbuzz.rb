@@ -6,7 +6,8 @@ class Fizzbuzz
     def sequence
         numbers.collect do |number|
             if multiple_of(3,number) && multiple_of(5,number)
-                "FizzBuzz"
+                fbe = FizzbuzzEngine.new(number)
+                fbe.value
             elsif multiple_of(3,number)
                 fbe = FizzbuzzEngine.new(number)
                 fbe.value
