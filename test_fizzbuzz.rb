@@ -22,4 +22,9 @@ class TestFizzbuzz < MiniTest::Test
         result = game.sequence
         assert_equal('FizzBuzz',result[14])
     end
+    def test_number_is_not_multiple_of_three_or_five_or_both
+        game = Fizzbuzz.new
+        result = game.sequence
+        assert_equal('FizzBuzz',result[0])
+    end
 end
