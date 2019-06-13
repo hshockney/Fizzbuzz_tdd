@@ -4,7 +4,7 @@ class Fizzbuzz
     end
     def sequence
         numbers.collect do |number|
-            if (number % 3 ==0) && (number % 5 ==0)
+            if multiple_of(3,number) && multiple_of(5,number)
                 "FizzBuzz"
             elsif multiple_of(3,number)
                 "Fizz"
