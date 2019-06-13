@@ -1,3 +1,4 @@
+require_relative 'fizzbuzz_engine'
 class Fizzbuzz
     def numbers
        (1..100).to_a 
@@ -7,7 +8,8 @@ class Fizzbuzz
             if multiple_of(3,number) && multiple_of(5,number)
                 "FizzBuzz"
             elsif multiple_of(3,number)
-                "Fizz"
+                fbe = FizzbuzzEngine.new(number)
+                fbe.value
             elsif multiple_of(5,number)
                 "Buzz"
             else
@@ -17,6 +19,6 @@ class Fizzbuzz
     end
     private
     def multiple_of(n,x)
-        x % n == 0
+        x.modulo(n).zero?
     end
 end
