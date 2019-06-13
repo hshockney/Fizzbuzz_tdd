@@ -7,4 +7,9 @@ class TestFizzbuzz < MiniTest::Test
         result = game.numbers
         assert_equal((1..100).to_a, result)
     end
+    def test_print_fizz_for_multiples_of_3
+        game = Fizzbuzz.new
+        result = game.sequence
+        assert_equal('Fizz',result[2])
+    end
 end
