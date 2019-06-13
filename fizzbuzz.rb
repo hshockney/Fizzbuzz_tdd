@@ -6,7 +6,7 @@ class Fizzbuzz
         numbers.collect do |number|
             if (number % 3 ==0) && (number % 5 ==0)
                 "FizzBuzz"
-            elsif (number % 3 == 0)
+            elsif multiple_of(3,number)
                 "Fizz"
             elsif (number % 5 == 0)
                 "Buzz"
@@ -14,5 +14,9 @@ class Fizzbuzz
                 number
             end
         end
+    end
+    private
+    def multiple_of(n,x)
+        x % n == 0
     end
 end
