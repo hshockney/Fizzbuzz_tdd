@@ -1,12 +1,12 @@
-require_relative 'fizzbuzz_engine'
+require_relative 'integer_extensions'
 class Fizzbuzz
+    using IntegerExtensions
     def numbers
        (1..100).to_a 
     end
     def sequence
         numbers.collect do |number|
-            fbe = FizzbuzzEngine.new(number)
-            fbe.value
+            number.fizzbuzz
         end
     end
     private
