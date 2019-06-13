@@ -9,22 +9,22 @@ class TestFizzbuzz < MiniTest::Test
     end
     def test_print_fizz_for_multiples_of_3
         game = Fizzbuzz.new
-        result = game.sequence
-        assert_equal('Fizz',result[2])
+        result = game.transform(3)
+        assert_equal(result, 'Fizz')
     end
     def test_print_buzz_for_multiples_of_5
         game = Fizzbuzz.new
-        result = game.sequence
-        assert_equal('Buzz',result[4])
+        result = game.transform(5)
+        assert_equal('Buzz',result)
     end
     def test_print_fizzbuzz_for_multiples_of_3_and_5
         game = Fizzbuzz.new
-        result = game.sequence
-        assert_equal('FizzBuzz',result[14])
+        result = game.transform(15)
+        assert_equal('FizzBuzz',result)
     end
     def test_number_is_not_multiple_of_three_or_five_or_both
         game = Fizzbuzz.new
-        result = game.sequence
-        assert_equal(1,result[0])
+        result = game.transform(1)
+        assert_equal(1,result)
     end
 end
