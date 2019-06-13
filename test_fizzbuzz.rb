@@ -12,4 +12,9 @@ class TestFizzbuzz < MiniTest::Test
         result = game.sequence
         assert_equal('Fizz',result[2])
     end
+    def test_print_fizz_for_multiples_of_5
+        game = Fizzbuzz.new
+        result = game.sequence
+        assert_equal('Buzz',result[4])
+    end
 end
