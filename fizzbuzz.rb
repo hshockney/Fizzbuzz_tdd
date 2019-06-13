@@ -5,18 +5,8 @@ class Fizzbuzz
     end
     def sequence
         numbers.collect do |number|
-            if multiple_of(3,number) && multiple_of(5,number)
-                fbe = FizzbuzzEngine.new(number)
-                fbe.value
-            elsif multiple_of(3,number)
-                fbe = FizzbuzzEngine.new(number)
-                fbe.value
-            elsif multiple_of(5,number)
-                fbe = FizzbuzzEngine.new(number)
-                fbe.value
-            else
-                number
-            end
+            fbe = FizzbuzzEngine.new(number)
+            fbe.value
         end
     end
     private
