@@ -8,7 +8,7 @@ class Fizzbuzz
                 "FizzBuzz"
             elsif multiple_of(3,number)
                 "Fizz"
-            elsif (number % 5 == 0)
+            elsif multiple_of(5,number)
                 "Buzz"
             else
                 number
